@@ -1,0 +1,470 @@
+.mock-interview {
+
+  min-height: 100vh;
+
+  padding: 2rem;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(0, 255, 255, 0.12),
+      transparent 25%),
+
+    radial-gradient(circle at bottom right,
+      rgba(140, 0, 255, 0.15),
+      transparent 25%),
+
+    #050816;
+
+  color: white;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2rem;
+
+  font-family: Inter, sans-serif;
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.mock-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 1.5rem 2rem;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 30px rgba(0, 255, 255, 0.08),
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+}
+
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.mock-title {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.mock-title svg {
+
+  width: 2rem;
+
+  height: 2rem;
+
+  color: #00ffff;
+
+  filter:
+    drop-shadow(0 0 12px #00ffff);
+}
+
+.mock-title h1 {
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00ffff,
+      #7f5cff,
+      #00ffff
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* =========================================
+   TIMER
+========================================= */
+
+.mock-timer {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  padding: 0.8rem 1.3rem;
+
+  border-radius: 18px;
+
+  background:
+    rgba(0, 255, 255, 0.08);
+
+  border:
+    1px solid rgba(0, 255, 255, 0.2);
+
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.15);
+}
+
+.mock-timer svg {
+
+  color: #00ffff;
+}
+
+.mock-timer span {
+
+  font-size: 1rem;
+
+  font-weight: 600;
+}
+
+
+
+/* =========================================
+   QUESTION CARD
+========================================= */
+
+.mock-question {
+
+  padding: 2rem;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 30px rgba(127, 92, 255, 0.12);
+}
+
+.question-tag {
+
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00ffff,
+      #7f5cff
+    );
+
+  color: white;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+}
+
+.mock-question h2 {
+
+  font-size: 2rem;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+
+/* =========================================
+   VOICE CONTAINER
+========================================= */
+
+.voice-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-top: 1rem;
+}
+
+
+
+/* =========================================
+   MIC BUTTON
+========================================= */
+
+.mic-btn {
+
+  width: 100px;
+
+  height: 100px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  cursor: pointer;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00ffff,
+      #7f5cff
+    );
+
+  color: white;
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 0 25px rgba(0, 255, 255, 0.4),
+    0 0 50px rgba(127, 92, 255, 0.35);
+
+  position: relative;
+}
+
+.mic-btn svg {
+
+  width: 2.3rem;
+
+  height: 2.3rem;
+}
+
+.mic-btn:hover {
+
+  transform:
+    scale(1.08)
+    rotate(2deg);
+
+  box-shadow:
+    0 0 40px rgba(0, 255, 255, 0.7),
+    0 0 70px rgba(127, 92, 255, 0.5);
+}
+
+
+
+/* =========================================
+   ACTIVE PULSE EFFECT
+========================================= */
+
+.mic-btn.active {
+
+  animation:
+    pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+
+  0% {
+
+    transform: scale(1);
+
+    box-shadow:
+      0 0 20px rgba(0,255,255,0.5),
+      0 0 40px rgba(127,92,255,0.3);
+  }
+
+  50% {
+
+    transform: scale(1.12);
+
+    box-shadow:
+      0 0 50px rgba(0,255,255,0.9),
+      0 0 90px rgba(127,92,255,0.7);
+  }
+
+  100% {
+
+    transform: scale(1);
+
+    box-shadow:
+      0 0 20px rgba(0,255,255,0.5),
+      0 0 40px rgba(127,92,255,0.3);
+  }
+}
+
+
+
+/* =========================================
+   ANSWER BOX
+========================================= */
+
+.answer-box {
+
+  width: 100%;
+
+  min-height: 220px;
+
+  padding: 1.5rem;
+
+  border-radius: 24px;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  background:
+    rgba(255,255,255,0.04);
+
+  backdrop-filter: blur(20px);
+
+  color: white;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  resize: none;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    inset 0 0 15px rgba(255,255,255,0.02);
+}
+
+.answer-box:focus {
+
+  border:
+    1px solid rgba(0,255,255,0.4);
+
+  box-shadow:
+    0 0 30px rgba(0,255,255,0.2);
+}
+
+.answer-box::placeholder {
+
+  color: rgba(255,255,255,0.45);
+}
+
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-btn {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  width: fit-content;
+
+  padding: 1rem 2rem;
+
+  border: none;
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00ffff,
+      #7f5cff
+    );
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 0 30px rgba(0,255,255,0.25),
+    0 0 40px rgba(127,92,255,0.2);
+}
+
+.submit-btn:hover {
+
+  transform:
+    translateY(-3px)
+    scale(1.02);
+
+  box-shadow:
+    0 0 50px rgba(0,255,255,0.5),
+    0 0 70px rgba(127,92,255,0.45);
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .mock-header {
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    align-items: flex-start;
+  }
+
+  .mock-question h2 {
+
+    font-size: 1.5rem;
+  }
+
+  .mic-btn {
+
+    width: 80px;
+
+    height: 80px;
+  }
+
+  .answer-box {
+
+    min-height: 180px;
+  }
+}
